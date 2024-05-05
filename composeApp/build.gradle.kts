@@ -28,8 +28,10 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "composeApp"
             isStatic = false
+            binaryOption("bundleId", "org.charr0max.herculeskmp.composeApp")
             // Add it to avoid sqllite3 issues in iOS
             linkerOpts.add("-lsqlite3")
+
         }
     }
 
@@ -77,8 +79,9 @@ kotlin {
             implementation(libs.mvvm.livedata)
             implementation(libs.mvvm.livedata.resources)
             implementation(libs.mvvm.state)
-            implementation("dev.icerock.moko:resources:0.23.0")
-            implementation("dev.icerock.moko:graphics:0.9.0") // toUIColor here
+            implementation(libs.resources)
+            implementation(libs.graphics) // toUIColor here
+            implementation(libs.stately.common)
         }
     }
 }
@@ -86,10 +89,9 @@ kotlin {
 sqldelight {
     databases {
         create("HerkulesDatabase") {
-            packageName.set("org.charr0max.herculeskmp")
+            packageName.set("org.charr0max.herculeskmp.cache")
         }
     }
-    linkSqlite = true
 }
 
 android {

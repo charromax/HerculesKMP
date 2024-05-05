@@ -3,13 +3,13 @@ package org.charr0max.herculeskmp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import org.charr0max.herculeskmp.data.firebase.DriverFactory
-import org.charr0max.herculeskmp.data.firebase.createDatabase
+import org.charr0max.herculeskmp.cache.AndroidDriverFactory
+import org.charr0max.herculeskmp.cache.Database
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        val driverFactory = DriverFactory(this)
-        val herkulesDatabase = createDatabase(driverFactory)
+        val driverFactory = AndroidDriverFactory(this)
+        val herkulesDatabase = Database(driverFactory).database
         super.onCreate(savedInstanceState)
         setContent {
             App(herkulesDatabase)

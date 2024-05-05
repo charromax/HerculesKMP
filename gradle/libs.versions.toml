@@ -7,6 +7,7 @@ androidx-activityCompose = "1.8.2"
 compose = "1.6.2"
 compose-plugin = "1.5.12"
 composeVectorizeCore = "0.4.0"
+graphics = "0.9.0"
 imageLoader = "1.7.1"
 koinAndroid = "3.4.3"
 koinCore = "3.3.3"
@@ -15,12 +16,14 @@ google = "4.4.1"
 ktorVersion = "2.3.8"
 moko = "0.16.1"
 resourcesGenerator = "0.23.0"
+statelyCommon = "2.0.5"
 uuid = "0.8.2"
 voyagerNavigator = "1.0.0"
 sqlDelight = "2.0.1"
 
 [libraries]
 compose-vectorize-core = { module = "dev.sergiobelda.compose.vectorize:compose-vectorize-core", version.ref = "composeVectorizeCore" }
+graphics = { module = "dev.icerock.moko:graphics", version.ref = "graphics" }
 image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "imageLoader" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -51,6 +54,7 @@ mvvm-test = { module = "dev.icerock.moko:mvvm-test", version.ref = "moko" }
 mvvm-viewbinding = { module = "dev.icerock.moko:mvvm-viewbinding", version.ref = "moko" }
 resources = { module = "dev.icerock.moko:resources", version.ref = "resourcesGenerator" }
 resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "resourcesGenerator" }
+stately-common = { module = "co.touchlab:stately-common", version.ref = "statelyCommon" }
 uuid = { module = "com.benasher44:uuid", version.ref = "uuid" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyagerNavigator" }
 
